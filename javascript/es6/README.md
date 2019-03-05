@@ -1,7 +1,7 @@
 # Javascript ES6
 
 ## 개발환경
-- [LINK](./es6-study/README.md)
+- [LINK](https://github.com/akageun/hello-es6)
 
 ## 소스
 
