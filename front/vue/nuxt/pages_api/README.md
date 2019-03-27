@@ -38,6 +38,7 @@
          * - data() 와 동일하게 사용하면됨.
          * - vuex가 설정되어 있을 경우 store를 사용할 수 있음.
          * - env를 이용하면 config에 설정된 환경변수도 사용 가능.
+         * - * asyncData 내부에서 this를 통해 컴포넌트 인스턴스에 접근하지 못합니다. 컴포넌트를 초기화하기 전에 호출되기 때문 입니다.
          *
          * @param context : url에 있는 params나 query 등을 가지고 올 수 있다.
          * @returns {{}}
@@ -91,6 +92,7 @@
          * layout 관련된 설정
          *  - 미 작성시 default 로 사용됨.
          *  - layout: '' 형태로도 사용 가능
+         *  - * layouts/customLayout.vue 형태로 만들면 됨.
          *
          * @param context
          * @returns {string}
@@ -118,5 +120,17 @@
 <style scoped>
 
 </style>
+
+```
+
+#### fetch 관련
+- async/await 를 사용하면 깔끔하게 처리할 수 있음.
+```javascript
+export default {
+  async fetch ({ store, params }) {
+    let { data } = await axios.get('http://test/api')
+    store.commit('setStars', data)
+  }
+}
 
 ```
