@@ -7,6 +7,9 @@
 vue init nuxt-community/starter-template <project-name>
 ```
 
+## Pages API
+- [바로가기](pages_api/)
+
 ## axios
 
 
