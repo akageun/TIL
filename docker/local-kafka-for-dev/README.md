@@ -38,6 +38,10 @@ services:
 
 > docker-compose down
 
+or
+
+> docker-compose stop
+
 #### 로그보기
 
 ###### zookeeper 로그보기
